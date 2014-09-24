@@ -45,10 +45,11 @@
 		</dependency>
 	</dependencies>
 
+    <!-- $ mvn -DperformRelease=true clean deploy -->
 	<distributionManagement>
 		<repository>
-			<id>foursquareapijava</id>
-			<url>svn:https://foursquare-api-java.googlecode.com/svn/repository</url>
+            <id>gh-pages</id>
+            <url>file:///${basedir}/../foursquare-api-java-gh-pages/repository/</url>
 		</repository>
 	</distributionManagement>
 
