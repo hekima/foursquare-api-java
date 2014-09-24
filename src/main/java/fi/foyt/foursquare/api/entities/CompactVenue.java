@@ -14,7 +14,9 @@
 package fi.foyt.foursquare.api.entities;
 
 import fi.foyt.foursquare.api.FoursquareEntity;
-import fi.foyt.foursquare.api.entities.venue.*;
+import fi.foyt.foursquare.api.entities.venue.Hours;
+import fi.foyt.foursquare.api.entities.venue.Menu;
+import fi.foyt.foursquare.api.entities.venue.Price;
 
 /**
  * Class representing CompactVenue entity
@@ -34,6 +36,16 @@ public class CompactVenue implements FoursquareEntity {
    */
   public String getId() {
     return id;
+  }
+  
+  /**
+   * Returns the number of todos for this venue
+   * 
+   * 
+   */
+  public Todos getTodos()
+  {
+      return todos;
   }
 
   /**
@@ -148,7 +160,7 @@ public class CompactVenue implements FoursquareEntity {
    * Returns array of specials at this venue
    * @return array of specials at this venue
    */
-  public SpecialGroup getSpecials() {
+  public CompleteSpecial[] getSpecials() {
     return specials;
   }
 
@@ -174,8 +186,9 @@ public class CompactVenue implements FoursquareEntity {
   private Menu menu;
   private Price price;
   private Integer rating;
-  private SpecialGroup specials;
+  private CompleteSpecial[] specials;
   private HereNow hereNow;
+  private Todos todos;
   
   // TODO
   private String page;

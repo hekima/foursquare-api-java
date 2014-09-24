@@ -144,8 +144,8 @@ public class TestIO extends IOHandler {
     setResponse("https://api.foursquare.com/v2/users/self/todos?sort=recent", "users/todos_1.json");
     setResponse("https://api.foursquare.com/v2/users/self/venuehistory", "users/venuehistory_1.json");
     setResponse("https://api.foursquare.com/v2/users/10078668/setpings?value=true", "users/setpings_1.json");
-    setResponse("https://api.foursquare.com/v2/venues/5104", "venues/id_1.json");
-    setResponse("https://api.foursquare.com/v2/venues/4cb38bf20cdc721ea943234f", "venues/id_2.json");
+    setResponse("https://api.foursquare.com/v2/venues/5104?m=foursquare", "venues/id_1.json");
+    setResponse("https://api.foursquare.com/v2/venues/4cb38bf20cdc721ea943234f?m=foursquare", "venues/id_2.json");
     setResponse("https://api.foursquare.com/v2/venues/4eb0479b93ad8dcab730a3c3", "venues/id_3.json");
     setResponse("https://api.foursquare.com/v2/venues/categories", "venues/categories_1.json");
     setResponse("https://api.foursquare.com/v2/venues/search?ll=40.7%2C-74", "venues/search_1.json");
@@ -159,7 +159,7 @@ public class TestIO extends IOHandler {
     setResponse("https://api.foursquare.com/v2/venues/5104/herenow", "venues/herenow_1.json");
     setResponse("https://api.foursquare.com/v2/venues/3fd66200f964a52074e31ee3/links", "venues/links_1.json");
     setResponse("https://api.foursquare.com/v2/venues/4beb18a36295c9b669478708/flag?problem=closed", "venues/flag_1.json");
-    setResponse("https://api.foursquare.com/v2/venues/5104/tips?sort=recent", "venues/tips_1.json");
+    setResponse("https://api.foursquare.com/v2/venues/5104/tips?m=foursquare&sort=recent", "venues/tips_1.json");
     setResponse("https://api.foursquare.com/v2/venues/4b81ea40f964a520e0c330e3/marktodo", "venues/marktodo_1.json");
     setResponse("https://api.foursquare.com/v2/venues/43695300f964a5208c291fe3/photos?group=venue", "venues/photos_1.json");
     setResponse("https://api.foursquare.com/v2/tips/4b5e662a70c603bba7d790b4", "tips/id_1.json");

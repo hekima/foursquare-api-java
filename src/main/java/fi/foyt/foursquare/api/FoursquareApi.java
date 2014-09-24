@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -71,7 +70,7 @@ import fi.foyt.foursquare.api.io.Response;
  */
 public class FoursquareApi {
 
-  private static final String DEFAULT_VERSION = "20140131";
+  private static final String DEFAULT_VERSION = "20140806";
 
   /**
    * Constructor.
@@ -590,7 +589,7 @@ public class FoursquareApi {
    */
   public Result<CompleteVenue> venue(String venueId) throws FoursquareApiException {
     try {
-      ApiRequestResponse response = doApiRequest(Method.GET, "venues/" + venueId, isAuthenticated(), "v", 20140806, "m", "foursquare");
+      ApiRequestResponse response = doApiRequest(Method.GET, "venues/" + venueId, isAuthenticated(), "m", "foursquare");
       CompleteVenue result = null;
       
       if (response.getMeta().getCode() == 200) {
@@ -679,7 +678,7 @@ public class FoursquareApi {
    */
   public Result<TipGroup> venuesTips(String venueId, String sort, Integer limit, Integer offset) throws FoursquareApiException {
     try {
-      ApiRequestResponse response = doApiRequest(Method.GET, "venues/" + venueId + "/tips" + "&v=20140806&m=foursquare", isAuthenticated(), "sort", sort, "limit", limit, "offset", offset);
+      ApiRequestResponse response = doApiRequest(Method.GET, "venues/" + venueId + "/tips", isAuthenticated(),"m","foursquare","sort", sort, "limit", limit, "offset", offset);
       TipGroup result = null;
 
       if (response.getMeta().getCode() == 200) {
