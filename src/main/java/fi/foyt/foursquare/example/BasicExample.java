@@ -3,6 +3,7 @@ package fi.foyt.foursquare.example;
 import fi.foyt.foursquare.api.FoursquareApi;
 import fi.foyt.foursquare.api.FoursquareApiException;
 import fi.foyt.foursquare.api.Result;
+import fi.foyt.foursquare.api.entities.Checkin;
 import fi.foyt.foursquare.api.entities.CompactVenue;
 import fi.foyt.foursquare.api.entities.CompleteVenue;
 import fi.foyt.foursquare.api.entities.VenuesSearchResult;
@@ -27,7 +28,9 @@ public class BasicExample {
 	  public void searchVenues(String ll) throws FoursquareApiException {
 	    // First we need a initialize FoursquareApi. 
 	    FoursquareApi foursquareApi = new FoursquareApi("CGBJN4EH2J23RV3IGUCGVKC4J4DGZ5W2XJWAXRAIKJVJOFV3", "GT4LZ5Q4R4SQGSSQDFHAZZ4GSJKAZTRLHZ2QGIV0M401ZXF2", new String());
-          //foursquareKey = "CGBJN4EH2J23RV3IGUCGVKC4J4DGZ5W2XJWAXRAIKJVJOFV3";
+        foursquareApi.setoAuthToken("DTIM5Y0HEBLOQ1TEUSBLSVHH0U5G3JOH2DB3UB2QXFP5UF4S");
+	    
+	    //foursquareKey = "CGBJN4EH2J23RV3IGUCGVKC4J4DGZ5W2XJWAXRAIKJVJOFV3";
           //foursquareSecret = "GT4LZ5Q4R4SQGSSQDFHAZZ4GSJKAZTRLHZ2QGIV0M401ZXF2";
           //foursquareAccessToken = "DTIM5Y0HEBLOQ1TEUSBLSVHH0U5G3JOH2DB3UB2QXFP5UF4S";
 
@@ -38,7 +41,11 @@ public class BasicExample {
 
 	    // After client has been initialized we can make queries.
         Result<CompleteVenue> result = foursquareApi.venue(venueId);
+        
+//        https://www.swarmapp.com/rafaaaaelasouza/checkin/54231b39498e9d618f59ec7b?s=dbWV-R8WhkHlGeac0HaaQeePw8w&ref=tw
+        Result<Checkin> resultCheckin = foursquareApi.checkin("54231b39498e9d618f59ec7b", "dbWV-R8WhkHlGeac0HaaQeePw8w");
 
+        resultCheckin.getMeta();
         /*
 	    if (result.getMeta().getCode() == 200) {
 	      // if query was ok we can finally we do something with the data
