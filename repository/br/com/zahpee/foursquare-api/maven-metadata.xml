@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>fi.foyt</groupId>
+  <groupId>br.com.zahpee</groupId>
   <artifactId>foursquare-api</artifactId>
   <versioning>
     <versions>
       <version>1.0.3-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20140924175629</lastUpdated>
+    <lastUpdated>20140924180206</lastUpdated>
   </versioning>
 </metadata>
