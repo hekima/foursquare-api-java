@@ -3,7 +3,7 @@
 	<groupId>br.com.zahpee</groupId>
 	<artifactId>foursquare-api</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.4-SNAPSHOT</version>
+	<version>1.0.5-SNAPSHOT</version>
 	<name>Foursquare API</name>
 	<licenses>
 		<license>

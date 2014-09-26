@@ -4,9 +4,8 @@
   <artifactId>foursquare-api</artifactId>
   <versioning>
     <versions>
-      <version>1.0.3-SNAPSHOT</version>
-      <version>1.0.4-SNAPSHOT</version>
+      <version>1.0.5-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20140924202834</lastUpdated>
+    <lastUpdated>20140926201402</lastUpdated>
   </versioning>
 </metadata>
