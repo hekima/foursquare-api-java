@@ -3,7 +3,7 @@
 	<groupId>br.com.zahpee</groupId>
 	<artifactId>foursquare-api</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.4</version>
 	<name>Foursquare API</name>
 	<licenses>
 		<license>
@@ -118,13 +118,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-		<extensions>
-			<extension>
-				<groupId>com.google.code.maven-svn-wagon</groupId>
-				<artifactId>maven-svn-wagon</artifactId>
-				<version>1.4</version>
-			</extension>
-		</extensions>
 	</build>
 
 	<profiles>
